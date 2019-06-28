@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3983a553c8bccae43998b5ee570a8903, type: 3}
+  m_Name: XcodeProjectSetting
+  m_EditorClassIdentifier: 
+  EnableBitCode: 0
+  EnableCppEcceptions: 1
+  EnableCppRtti: 1
+  EnableObjcExceptions: 1
+  EnableGameCenter: 1
+  EntitlementFilePath: hw.entitlements
+  XcodeAPIDirectoryPath: Assets/GameMain/Scripts/Editor/XCodeAPI
+  DevelopmentTeam: K3G2K7L99P
+  ProvisioningProfile: sd_product_20180716
+  CodeSignIdentity: 'iPhone Distribution: Jiu Wanli network technology (Shanghai)
+    Co., Ltd.'
+  FrameworkList:
+  - name: StoreKit.framework
+    weak: 0
+  - name: SystemConfiguration.framework
+    weak: 0
+  - name: Security.framework
+    weak: 0
+  - name: JavaScriptCore.framework
+    weak: 1
+  - name: AdSupport.framework
+    weak: 0
+  - name: CoreTelephony.framework
+    weak: 0
+  - name: iAd.framework
+    weak: 0
+  - name: Accounts.framework
+    weak: 1
+  - name: Social.framework
+    weak: 1
+  EmbedFrameworkList:
+  - LBSDK.framework
+  TbdList:
+  - libz.tbd
+  - libc++.tbd
+  - libsqlite3.0.dylib
+  LinkerFlagArray:
+  - -ObjC
+  FrameworkSearchPathArray:
+  - $(inherited)
+  - $(PROJECT_DIR)/Frameworks
+  CompilerFlagsSetList: []
+  CopyFilesList:
+  - sourcePath: AppIcon.appiconset
+    copyPath: /Unity-iPhone/Images.xcassets/AppIcon.appiconset
+  - sourcePath: UnityAppController.mm
+    copyPath: /Classes/UnityAppController.mm
+  ApplicationQueriesSchemes: []
+  privacySensiticeData:
+  - key: NSCalendarsUsageDescription
+    description: Calendar usage required for in-game events.
+  - key: NSPhotoLibraryUsageDescription
+    description: Photo Library usage required for sharing in-game footage & screenshots.
+  - key: NSMicrophoneUsageDescription
+    description: Microphone usage required for live broadcasting service.
+  - key: NSCameraUsageDescription
+    description: Camera usage required for live broadcasting service.
+  BundleUrlTypeList: []
+  BackgroundModes: []

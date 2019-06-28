@@ -1,0 +1,53 @@
+/*
+ LBBWBX.strings
+ LanguageTest
+ 
+ Created by 荀江涛 on 16/10/25.
+ Copyright © 2016年 xunjiangtao. All rights reserved.
+ */
+/*wifi*/
+"split_wifi_fore_download"  = "游戏需要下载资源%.2fM，您当前处于WiFi网络，不下载将无法进入游戏，是否立即下载？";
+"split_wifi_back_download"  = "游戏需要下载资源%.2fM，您当前处于WiFi网络，是否后台下载？";
+"hotfix_wifi_fore_download" = "游戏需要下载更新包%.2fM，您当前处于WiFi网络，是否立即下载？";
+"hotfix_wifi_back_download" = "游戏需要下载更新资源%.2fM，您当前处于WiFi网络，是否后台下载？";
+/*wwan*/
+"split_wwan_fore_download"  = "游戏需要下载资源%.2fM，您当前处于流量网络，不下载将无法进入游戏，是否立即下载？";
+"split_wwan_back_download"  = "游戏需要下载资源%.2fM，您当前处于流量网络，是否后台下载？";
+"hotfix_wwan_fore_download" = "游戏需要下载更新包%.2fM，您当前处于流量网络，是否立即下载？";
+"hotfix_wwan_back_download" = "游戏需要下载更新资源%.2fM，您当前处于流量网络，是否后台下载？";
+/*unReach*/
+"alert_noReachable" = "连接失败，请检查网络";
+/*title*/
+"title_connectServer"             = "正在连接服务器...";
+"title_resource_downloading"      = "资源下载中...";
+"title_network_error"             = "网络已断开";
+"title_resource_downloadFailed"   = "下载失败，请检查网络";
+"title_resource_downloadFinished" = "下载完成";
+"title_resource_unzip"            = "解压中(不消耗流量)...";
+"title_resource_unzip_failed"     = "解压失败，重新下载";
+"title_resource_combining"        = "资源合并中(请勿关闭游戏)...";
+"title_resource_combine_failed"   = "资源合并失败";
+"title_resource_combined"         = "资源合并完成";
+"title_resource_allFinished"      = "正在加载游戏，请稍等";
+/*button*/
+"button_ok" = "是";
+"button_no" = "否";
+"button_download_now" = "立即下载";
+"button_download_background" = "后台下载";
+"button_download_later" = "以后再说";
+"button_continue_game" = "继续游戏";
+"button_exitGame" = "退出游戏";
+"button_confirm" = "确定";
+"button_retry" = "重试";
+"button_jumpAppStore" = "跳转商店";
+/*other*/
+"alert_space_notEnough" = "存储空间不足，请清理出足够空间后重试";
+"alert_lowSpeed"        = "游戏资源后台下载速度过慢，将会影响游戏体验，是否一次性下载所有资源（%.2fM）?";
+"alert_resourceEnd"     = "继续游戏需要下载%.2fM资源，建议您开启WiFi，体验完整游戏画面，是否继续游戏？";
+"alert_old_player"      = "一次性下载所有资源(%.2fM)，游戏会更加流畅";
+"alert_old_player_wwan" = "一次性下载所有资源(%.2fM)，游戏会更加流畅，您当前处于流量网络，是否立即下载？";
+"alert_resource_failed" = "资源加载失败：MD5不匹配";
+"alert_restart_option"  = "更新完成，是否重启游戏加载新版本？";
+"alert_restart_force"   = "更新完成，请重启游戏";
+"alert_appstore"        = "游戏在AppStore上有新版本，是否前往更新";
+"alert_sdk_add_error"   = "sdk集成错误，乐变渠道号(Info.plist->LEBIAN_APPID)和sdk选择的发布地区(lebianFlag.xml->selected_area)不匹配";

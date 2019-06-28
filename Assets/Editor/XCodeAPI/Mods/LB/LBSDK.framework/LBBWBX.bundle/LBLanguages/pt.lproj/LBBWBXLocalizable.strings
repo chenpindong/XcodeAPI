@@ -1,0 +1,53 @@
+/*
+ LBBWBX.strings
+ LanguageTest
+ 
+ Created by 荀江涛 on 16/10/25.
+ Copyright © 2016年 xunjiangtao. All rights reserved.
+ */
+/*wifi*/
+"split_wifi_fore_download"  = "O jogo requer que você baixe %.2fMB de recursos. Você está conectado a um Wi-Fi e a atualização é necessária para jogar. Baixar agora?";
+"split_wifi_back_download"  = "O jogo requer que você baixe %.2fMB de recursos. Você está conectado a um Wi-Fi. Gostaria de baixar em segundo plano?";
+"hotfix_wifi_fore_download" = "O jogo precisa baixar um pacote de atualização (%.2fMB). Você está conectado a um Wi-Fi. Baixar agora?";
+"hotfix_wifi_back_download" = "O jogo precisa baixar um pacote de atualização (%.2fMB). Você está conectado a um Wi-Fi. Gostaria de baixar em segundo plano?";
+/*wwan*/
+"split_wwan_fore_download"  = "O jogo requer que você baixe %.2fMB de recursos. Você está usando dados móveis e a atualização é necessária para jogar. Baixar agora?";
+"split_wwan_back_download"  = "O jogo requer que você baixe %.2fMB de recursos. Você está usando dados móveis. Gostaria de baixar em segundo plano?";
+"hotfix_wwan_fore_download" = "O jogo precisa baixar um pacote de atualização (%.2fMB). Você está usando dados móveis. Baixar agora?";
+"hotfix_wwan_back_download" = "O jogo precisa baixar um pacote de atualização (%.2fMB). Você está usando dados móveis. Gostaria de baixar em segundo plano?";
+/*unReach*/
+"alert_noReachable" = "Falha na conexão. Verifique sua conexão com a internet.";
+/*title*/
+"title_connectServer"             = "Conectando ao servidor...";
+"title_resource_downloading"      = "Baixando arquivos de recursos...";
+"title_network_error"             = "Conexão perdida";
+"title_resource_downloadFailed"   = "Falha no download. Verifique sua conexão com a internet.";
+"title_resource_downloadFinished" = "Download concluído";
+"title_resource_unzip"            = "Descompactando (Isso não consome os dados móveis)...";
+"title_resource_unzip_failed"     = "Falha na descompactação. Baixe novamente.";
+"title_resource_combining"        = "Consolidando recursos (não feche o jogo)…";
+"title_resource_combine_failed"   = "Falha na consolidação de recursos.";
+"title_resource_combined"         = "Recursos consolidados.";
+"title_resource_allFinished"      = "Carregando jogo, aguarde...";
+/*button*/
+"button_ok" = "Sim";
+"button_no" = "Não";
+"button_download_now" = "Baixar agora";
+"button_download_background" = "Baixar em segundo plano";
+"button_download_later" = "Mais tarde";
+"button_continue_game" = "Continuar jogando";
+"button_exitGame" = "Sair";
+"button_confirm" = "OK";
+"button_retry" = "Tentar novamente";
+"button_jumpAppStore" = "Vá para a Loja";
+/*other*/
+"alert_space_notEnough" = "Espaço de armazenamento insuficiente. Libere mais espaço de armazenamento e tente novamente.";
+"alert_lowSpeed"        = "O download dos recursos de jogo em segundo plano está lento e isso pode afetar a experiência do jogo. Gostaria de baixar todos os recursos de uma vez (%.2fMB)?";
+"alert_resourceEnd"     = "Você precisa baixar %.2fMB de recursos para continuar jogando. Recomendamos que você conecte-se a um Wi-Fi para obter a melhor experiência de jogo. Gostaria de continuar jogando?";
+"alert_old_player"      = "Baixe todos os recursos de uma vez (%.2fMB) para obter a melhor experiência de jogo.";
+"alert_old_player_wwan" = "Baixe todos os recursos de uma vez (%.2fMB) para obter a melhor experiência de jogo. Você está usando dados móveis. Gostaria de baixar agora?";
+"alert_resource_failed" = "Falha ao carregar os recursos: MD5 incompatível.";
+"alert_restart_option"  = "Atualização concluída. Gostaria de reiniciar o jogo e carregar a nova versão?";
+"alert_restart_force"   = "Atualização concluída. Reinicie o jogo.";
+"alert_appstore"        = "Há uma nova versão do jogo na App Store. Gostaria de ir para ela para começar a atualizar?";
+"alert_sdk_add_error"   = "Erro de integração SDK. O canal Loveota Nº (Info.plist->LEBIAN_APPID) e a área de publicação SDK selecionada (lebianFlag.xml->selected_area) não são compatíveis.";

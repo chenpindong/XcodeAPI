@@ -1,0 +1,53 @@
+/*
+ LBBWBX.strings
+ LanguageTest
+ 
+ Created by 荀江涛 on 16/10/25.
+ Copyright © 2016年 xunjiangtao. All rights reserved.
+ */
+/*wifi*/
+"split_wifi_fore_download"  = "ゲームを続くには(%.2fM)の資源をダウンロード必要です。今すぐダウンロードしますか?";
+"split_wifi_back_download"  = "ゲームをアップデートするため、(%.2fM)の資源をダウンロード必要です。今すぐバックグラウンドにダウンロードしますか?";
+"hotfix_wifi_fore_download" = "ゲームをアップデートするには(%.2fM)の資源をダウンロード必要です。今すぐダウンロードしますか?";
+"hotfix_wifi_back_download" = "ゲームをアップデートするため、(%.2fM)の資源をダウンロード必要です。今すぐバックグラウンドにダウンロードしますか?";
+/*wwan*/
+"split_wwan_fore_download"  = "ゲームをアップデートするには(%.2fM)の資源をダウンロード必要です。今wifi環境ではないですが、ゲームを続くにはダウンロードが必要。今すぐダウンロードしますか?";
+"split_wwan_back_download"  = "ゲームを続くには(%.2fM)の資源をダウンロード必要です。今wifi環境ではないです。今すぐダウンロードしますか?";
+"hotfix_wwan_fore_download" = "ゲームをアップデートするには(%.2fM)の資源をダウンロード必要です。今wifi環境ではないです。今すぐダウンロードしますか?";
+"hotfix_wwan_back_download" = "ゲームをアップデートするには(%.2fM)の資源をダウンロード必要です。今wifi環境ではないです。今すぐダウンロードしますか?";
+/*unReach*/
+"alert_noReachable" = "ネットワーク異常です。ネット接続をリトライしてください";
+/*title*/
+"title_connectServer"             = "サーバ接続中...";
+"title_resource_downloading"      = "データをダウンロード中...";
+"title_network_error"             = "インターネットに接続されていません";
+"title_resource_downloadFailed"   = "資源ダウンロード失敗";
+"title_resource_downloadFinished" = "資源ダウンロード完了";
+"title_resource_unzip"            = "資源解凍中(パケットを消耗しません)...";
+"title_resource_unzip_failed"     = "解凍失敗、もう一度ダウンロードします";
+"title_resource_combining"        = "資源合併中(ゲームを閉めないでください)...";
+"title_resource_combine_failed"   = "資源合併失敗";
+"title_resource_combined"         = "資源合併完了";
+"title_resource_allFinished"      = "ゲームを読み込み中、少々お待ち下さい";
+/*button*/
+"button_ok" = "はい";
+"button_no" = "いいえ";
+"button_download_now" = "すぐにダウンロード";
+"button_download_background" = "すぐにダウンロード";
+"button_download_later" = "後で";
+"button_continue_game" = "ゲームを続ける";
+"button_exitGame" = "ゲーム退出";
+"button_confirm" = "確認";
+"button_retry" = "再試行";
+"button_jumpAppStore" = "トランジスター";
+/*other*/
+"alert_space_notEnough" = "ゲームが正常にプレイできません。ストレージ容量を整理してください";
+"alert_lowSpeed"        = "ゲーム資源バックグラウンドダウンロードスピードが遅すぎますので、ゲーム体験が良くないです。一回で全資源をダウンロードしますか(%.2fM)?";
+"alert_resourceEnd"     = "今wifi環境ではないです。ゲームを続くには(.2fM)の資源をダウンロード必要です。今すぐダウンロードしますか?";
+"alert_old_player"      = "一回で全資源をダウンロードしますのはおすすめです。今すぐダウンロードしますか(%.2fM)?";
+"alert_old_player_wwan" = "一回で全資源をダウンロードしますのはおすすめです。今すぐダウンロードしますか(%.2fM)?";
+"alert_resource_failed" = "リソースエラー。データのダウンロードに失敗しました。";
+"alert_restart_option"  = "现在のゲームの新バージョン资源をダウンロードして、新しいバージョンを再开したか?";
+"alert_restart_force"   = "现在のゲームの新バージョンはダウンロード完了しており、再开して下さい";
+"alert_appstore"        = "ゲームはアプリケーションストアに新しいバージョンがあり、ダウンロードするかどうか";
+"alert_sdk_add_error"   = "sdk集成错误，乐变渠道号(Info.plist->LEBIAN_APPID)和sdk选择的发布地区(lebianFlag.xml->selected_area)不匹配";

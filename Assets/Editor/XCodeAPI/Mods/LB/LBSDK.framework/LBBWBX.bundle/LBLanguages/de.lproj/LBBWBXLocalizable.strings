@@ -1,0 +1,53 @@
+/*
+ LBBWBX.strings
+ LanguageTest
+ 
+ Created by 荀江涛 on 16/10/25.
+ Copyright © 2016年 xunjiangtao. All rights reserved.
+ */
+/*wifi*/
+"split_wifi_fore_download"  = "Das Spiel erfordert den Download von %.2fMB Ressourcen. Du bist mit dem WLAN verbunden und das Update ist erforderlich, um das Spiel aufzurufen. Jetzt herunterladen?";
+"split_wifi_back_download"  = "Das Spiel erfordert den Download von %.2fMB Ressourcen. Du bist mit dem WLAN verbunden. Jetzt im Hintergrund herunterladen?";
+"hotfix_wifi_fore_download" = "Das Spiel muss ein Update-Paket herunterladen (%.2fMB). Du bist mit dem WLAN verbunden. Jetzt herunterladen?";
+"hotfix_wifi_back_download" = "Das Spiel erfordert den Download von Update-Ressourcen (%.2fMB). Du bist mit dem WLAN verbunden. Jetzt im Hintergrund herunterladen?";
+/*wwan*/
+"split_wwan_fore_download"  = "Das Spiel erfordert den Download von %.2fMB Ressourcen. Du verwendest mobile Daten und das Update ist erforderlich, um das Spiel aufzurufen. Jetzt herunterladen?";
+"split_wwan_back_download"  = "Das Spiel erfordert den Download von %.2fMB Ressourcen. Du verwendest mobile Daten. Jetzt im Hintergrund herunterladen?";
+"hotfix_wwan_fore_download" = "Das Spiel muss ein Update-Paket herunterladen (%.2fMB). Du verwendest mobile Daten. Jetzt herunterladen?";
+"hotfix_wwan_back_download" = "Das Spiel erfordert den Download von Update-Ressourcen (%.2fMB). Du verwendest mobile Daten. Jetzt im Hintergrund herunterladen?";
+/*unReach*/
+"alert_noReachable" = "Verbindung fehlgeschlagen. Bitte prüfe deine Internet-Verbindung.";
+/*title*/
+"title_connectServer"             = "Verbindet mit Server ...";
+"title_resource_downloading"      = "Ressourcen werden heruntergeladen ...";
+"title_network_error"             = "Verbindung getrennt.";
+"title_resource_downloadFailed"   = "Download fehlgeschlagen. Bitte prüfe deine Internet-Verbindung.";
+"title_resource_downloadFinished" = "Download abgeschlossen";
+"title_resource_unzip"            = "Entpackt ... (Dabei werden keine mobilen Daten verbraucht.)";
+"title_resource_unzip_failed"     = "Entpacken fehlgeschlagen. Bitte erneut herunterladen.";
+"title_resource_combining"        = "Ressourcen werden konsolidiert ... (Bitte das Spiel nicht beenden.)";
+"title_resource_combine_failed"   = "Konsolidierung der Ressourcen fehlgeschlagen.";
+"title_resource_combined"         = "Ressourcen konsolidiert.";
+"title_resource_allFinished"      = "Spiel lädt, bitte warten.";
+/*button*/
+"button_ok" = "Ja";
+"button_no" = "Nein";
+"button_download_now" = "Jetzt herunterladen";
+"button_download_background" = "In Hintergrund herunterladen";
+"button_download_later" = "Vielleicht später";
+"button_continue_game" = "Weiterspielen";
+"button_exitGame" = "Verlassen";
+"button_confirm" = "O. K.";
+"button_retry" = "Erneut versuchen";
+"button_jumpAppStore" = "Zum Shop";
+/*other*/
+"alert_space_notEnough" = "Nicht genug Speicherplatz. Bitte sorge für ausreichend Speicherplatz und versuche es erneut.";
+"alert_lowSpeed"        = "Der Download von Spielressourcen im Hintergrund läuft langsam und wirkt sich auf das Spielerlebnis aus. Möchtest du alle Spielressourcen auf einmal herunterladen (%.2fMB)?";
+"alert_resourceEnd"     = "Du musst %.2fMB Ressourcen herunterladen, um weiterspielen zu können. Für das beste Spielerlebnis solltest du dich mit dem WLAN verbinden. Möchtest du weiterspielen?";
+"alert_old_player"      = "Lade für ein besseres Spielerlebnis alle Ressourcen auf einmal herunter (%.2fMB).";
+"alert_old_player_wwan" = "Lade für ein besseres Spielerlebnis alle Ressourcen auf einmal herunter (%.2fMB). Du verwendest mobile Daten. Jetzt herunterladen?";
+"alert_resource_failed" = "Laden der Ressourcen fehlgeschlagen: MD5 nicht kompatibel";
+"alert_restart_option"  = "Update abgeschlossen. Spiel neu starten und die neue Version laden?";
+"alert_restart_force"   = "Update abgeschlossen. Bitte starte das Spiel neu.";
+"alert_appstore"        = "Im App Store gibt es eine neue Version des Spiels. Möchtest du ihn aufrufen, um das Update zu starten?";
+"alert_sdk_add_error"   = "SDK-Integrationsfehler. Der Loveota-Kanal (Info.plist->LEBIAN_APPID) und der ausgewählte SDK-Veröffentlichungsbereich (lebianFlag.xml->selected_area) stimmen nicht überein.";

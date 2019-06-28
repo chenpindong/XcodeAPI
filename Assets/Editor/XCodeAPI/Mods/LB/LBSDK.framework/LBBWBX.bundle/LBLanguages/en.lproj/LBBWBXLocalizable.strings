@@ -1,0 +1,53 @@
+/*
+ LBBWBX.strings
+ LanguageTest
+ 
+ Created by 荀江涛 on 16/10/25.
+ Copyright © 2016年 xunjiangtao. All rights reserved.
+ */
+/*wifi*/
+"split_wifi_fore_download"  = "The game requires you to download %.2fMB of resources. You are connected to Wi-Fi. Download now?";
+"split_wifi_back_download"  = "The game requires you to download %.2fMB of resources. You are connected to Wi-Fi. Do you want to download them in the background?";
+"hotfix_wifi_fore_download" = "The game needs to download an update package (%.2fMB). You are connected to Wi-Fi. Download now?";
+"hotfix_wifi_back_download" = "The game needs to download update resources (%.2fMB). You are connected to Wi-Fi. Do you want to download them in the background?";
+/*wwan*/
+"split_wwan_fore_download"  = "The game requires you to download %.2fMB of resources. You are using mobile data. Download now?";
+"split_wwan_back_download"  = "The game requires you to download %.2fMB of resources. You are using mobile data. Do you want to download them in the background?";
+"hotfix_wwan_fore_download" = "The game needs to download an update package (%.2fMB). You are using mobile data. Download now?";
+"hotfix_wwan_back_download" = "The game needs to download update resources (%.2fMB). You are using mobile data. Do you want to download them in the background?";
+/*unReach*/
+"alert_noReachable" = "Connection failed. Please check your Internet connection.";
+/*title*/
+"title_connectServer"             = "Connecting to server...";
+"title_resource_downloading"      = "Downloading resources...";
+"title_network_error"             = "Connection lost";
+"title_resource_downloadFailed"   = "Download failed. Please check your Internet connection.";
+"title_resource_downloadFinished" = "Download Complete";
+"title_resource_unzip"            = "Extracting...";
+"title_resource_unzip_failed"     = "Extract failed";
+"title_resource_combining"        = "Consolidating resources (please don’t close the game)...";
+"title_resource_combine_failed"   = "Failed to consolidate resources.";
+"title_resource_combined"         = "Resources consolidated.";
+"title_resource_allFinished"      = "Game is loading, please wait.";
+/*button*/
+"button_ok" = "YES";
+"button_no" = "NO";
+"button_download_now" = "Download now";
+"button_download_background" = "Download in background";
+"button_download_later" = "Later";
+"button_continue_game" = "Continue playing";
+"button_exitGame" = "Quit";
+"button_confirm" = "OK";
+"button_retry" = "Try again";
+"button_jumpAppStore" = "Go to AppStore";
+/*other*/
+"alert_space_notEnough" = "Not enough storage space. Please free up enough storage space and try again.";
+"alert_lowSpeed"        = "The download of game resources in the background is going slow and will affect the game experience. Do you want to download all resources in one go (%.2fMB)?";
+"alert_resourceEnd"     = "You need to download %.2fMB of resources to continue playing. We recommend that you connect to Wi-Fi for the best game experience. Do you want to continue playing?";
+"alert_old_player"      = "Download all resources in one go (%.2fMB) for a better game experience.";
+"alert_old_player_wwan" = "Download all resources in one go (%.2fMB) for a better game experience. You are using mobile data. Download now?";
+"alert_resource_failed" = "Failed to load resources: Incompatible MD5";
+"alert_restart_option"  = "Update completed. Restart the game and load the new version?";
+"alert_restart_force"   = "Update completed. Please restart the game.";
+"alert_appstore"        = "There is a new version of the game in the App Store. Do you want to head there to start updating?";
+"alert_sdk_add_error"   = "SDK integration error. The Loveota channel no. (Info.plist->LEBIAN_APPID) and the selected SDK publish area (lebianFlag.xml->selected_area) do not match.";

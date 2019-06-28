@@ -1,0 +1,53 @@
+/*
+ LBBWBX.strings
+ LanguageTest
+ 
+ Created by 荀江涛 on 16/10/25.
+ Copyright © 2016年 xunjiangtao. All rights reserved.
+ */
+/*wifi*/
+"split_wifi_fore_download"  = "Il gioco richiede il download di alcune risorse (%.2f MB). Sei connesso al Wi-Fi e l'aggiornamento è necessario per poter giocare. Procedere con il download?";
+"split_wifi_back_download"  = "Il gioco richiede il download di alcune risorse (%.2f MB). Sei connesso al Wi-Fi. Procedere con il download in background?";
+"hotfix_wifi_fore_download" = "Il gioco deve scaricare un aggiornamento (%.2f MB). Sei connesso al Wi-Fi. Procedere con il download?";
+"hotfix_wifi_back_download" = "Il gioco richiede il download di alcune risorse per l'aggiornamento (%.2f MB). Sei connesso al Wi-Fi. Procedere con il download in background?";
+/*wwan*/
+"split_wwan_fore_download"  = "Il gioco richiede il download di alcune risorse (%.2f MB). Stai usando il traffico dati e l'aggiornamento è necessario per poter giocare. Procedere con il download?";
+"split_wwan_back_download"  = "Il gioco richiede il download di alcune risorse (%.2f MB). Stai usando il traffico dati. Procedere con il download in background?";
+"hotfix_wwan_fore_download" = "Il gioco deve scaricare un aggiornamento (%.2f MB). Stai usando il traffico dati. Procedere con il download?";
+"hotfix_wwan_back_download" = "Il gioco richiede il download di alcune risorse per l'aggiornamento (%.2f MB). Stai usando il traffico dati. Procedere con il download in background?";
+/*unReach*/
+"alert_noReachable" = "Connessione non riuscita. Verifica di essere connesso a Internet.";
+/*title*/
+"title_connectServer"             = "Connessione al server in corso...";
+"title_resource_downloading"      = "Download delle risorse in corso...";
+"title_network_error"             = "Connessione interrotta";
+"title_resource_downloadFailed"   = "Download non riuscito. Verifica di essere connesso a Internet.";
+"title_resource_downloadFinished" = "Download completato";
+"title_resource_unzip"            = "Estrazione in corso. L'operazione non consuma traffico dati.";
+"title_resource_unzip_failed"     = "Impossibile estrarre le risorse. Effettuare nuovamente il download.";
+"title_resource_combining"        = "Consolidamento delle risorse in corso. Non chiudere l'applicazione.";
+"title_resource_combine_failed"   = "Impossibile consolidare le risorse.";
+"title_resource_combined"         = "Risorse consolidate.";
+"title_resource_allFinished"      = "Caricamento del gioco in corso. Attendere...";
+/*button*/
+"button_ok" = "Sì";
+"button_no" = "No";
+"button_download_now" = "Scarica ora";
+"button_download_background" = "Effettua il download in background";
+"button_download_later" = "Magari un'altra volta";
+"button_continue_game" = "Continua a giocare";
+"button_exitGame" = "Esci";
+"button_confirm" = "OK";
+"button_retry" = "Riprova";
+"button_jumpAppStore" = "Vai al negozio";
+/*other*/
+"alert_space_notEnough" = "Spazio libero insufficiente. Libera spazio a sufficienza e riprova.";
+"alert_lowSpeed"        = "Il download delle risorse di gioco in background è lento e l'esperienza di gioco potrebbe risentirne. Scaricare tutte le risorse (%.2f MB) in un'unica sessione?";
+"alert_resourceEnd"     = "Per poter continuare a giocare devi scaricare alcune risorse (%.2f MB). Per una migliore esperienza, ti consigliamo di connetterti al Wi-Fi. Continuare a giocare?";
+"alert_old_player"      = "Per una migliore esperienza di gioco, scarica tutte le risorse in un'unica sessione di download (%.2f MB).";
+"alert_old_player_wwan" = "Per una migliore esperienza di gioco, scarica tutte le risorse in un'unica sessione di download (%.2f MB). Stai usando il traffico dati. Procedere con il download?";
+"alert_resource_failed" = "Caricamento delle risorse non riuscito: MD5 incompatibile.";
+"alert_restart_option"  = "Aggiornamento completato. Riavviare il gioco e caricare la nuova versione?";
+"alert_restart_force"   = "Aggiornamento completato. Riavvia il gioco.";
+"alert_appstore"        = "Una nuova versione del gioco è disponibile nell'App Store. Andare all'App Store e avviare l'aggiornamento?";
+"alert_sdk_add_error"   = "Errore di integrazione dell'SDK. Il canale Loveota N° (Info.plist->LEBIAN_APPID) e l'area di pubblicazione SDK selezionata (lebianFlag.xml->selected_area) non combaciano.";

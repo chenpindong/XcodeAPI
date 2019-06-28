@@ -1,0 +1,53 @@
+/*
+ LBBWBX.strings
+ LanguageTest
+ 
+ Created by 荀江涛 on 16/10/25.
+ Copyright © 2016年 xunjiangtao. All rights reserved.
+ */
+/*wifi*/
+"split_wifi_fore_download"  = "Game mengharuskanmu mengunduh %.2fMB sumber daya. Kamu tersambung ke Wi-Fi dan update dibutuhkan untuk memasuki game. Unduh sekarang?";
+"split_wifi_back_download"  = "Game mengharuskanmu mengunduh (%.2fMB) sumber daya. Kamu tersambung ke Wi-Fi. Ingin mengunduhnya di latar belakang?";
+"hotfix_wifi_fore_download" = "Game perlu mengunduh paket update (%.2fMB). Kamu tersambung ke Wi-Fi. Unduh sekarang? ";
+"hotfix_wifi_back_download" = "Game perlu mengunduh sumber daya update (%.2fMB). Kamu tersambung ke Wi-Fi. Ingin mengunduhnya di latar belakang?";
+/*wwan*/
+"split_wwan_fore_download"  = "Game mengharuskanmu mengunduh %.2fMB sumber daya. Kamu sedang menggunakan data seluler dan update dibutuhkan untuk memasuki game. Unduh sekarang?";
+"split_wwan_back_download"  = "Game mengharuskanmu mengunduh (%.2fMB) sumber daya. Kamu sedang menggunakan data seluler. Ingin mengunduhnya di latar belakang?";
+"hotfix_wwan_fore_download" = "Game perlu mengunduh paket update (%.2fMB). Kamu sedang menggunakan data seluler. Unduh sekarang? ";
+"hotfix_wwan_back_download" = "Game perlu mengunduh sumber daya update (%.2fMB). Kamu sedang menggunakan data seluler. Ingin mengunduhnya di latar belakang?";
+/*unReach*/
+"alert_noReachable" = "Sambungan gagal. Harap periksa sambungan Internetmu.";
+/*title*/
+"title_connectServer"             = "Menyambungkan ke server...";
+"title_resource_downloading"      = "Mengunduh sumber daya...";
+"title_network_error"             = "Sambungan terputus";
+"title_resource_downloadFailed"   = "Pengunduhan gagal. Harap periksa sambungan Internetmu.";
+"title_resource_downloadFinished" = "Pengunduhan Selesai";
+"title_resource_unzip"            = "Membongkar (Tidak memakai data seluler)...";
+"title_resource_unzip_failed"     = "Gagal membongkar. Silakan unduh lagi.";
+"title_resource_combining"        = "Menggabungkan sumber daya (mohon jangan menutup game)...";
+"title_resource_combine_failed"   = "Gagal menggabungkan sumber daya.";
+"title_resource_combined"         = "Sumber daya digabungkan.";
+"title_resource_allFinished"      = "Game sedang memuat, harap tunggu.";
+/*button*/
+"button_ok" = "Ya";
+"button_no" = "Tidak";
+"button_download_now" = "Unduh sekarang";
+"button_download_background" = "Unduh di latar belakang";
+"button_download_later" = "Mungkin nanti";
+"button_continue_game" = "Lanjutkan permainan";
+"button_exitGame" = "Keluar";
+"button_confirm" = "OKE";
+"button_retry" = "Coba lagi";
+"button_jumpAppStore" = "Masuk ke Toko";
+/*other*/
+"alert_space_notEnough" = "Ruang penyimpanan tidak cukup. Harap kosongkan cukup ruang dan coba lagi.";
+"alert_lowSpeed"        = "Pengunduhan sumber daya game di latar belakang berjalan lambat dan akan memengaruhi pengalaman game. Ingin mengunduh semua sumber daya sekaligus (%.2fMB)?";
+"alert_resourceEnd"     = "Kamu perlu mengunduh %.2fMB sumber daya untuk terus bermain. Kami menyarankan kamu menyambung ke Wi-Fi untuk pengalaman game terbaik. Ingin melanjutkan permainan?";
+"alert_old_player"      = "Unduh semua sumber daya sekaligus (%.2fMB) untuk pengalaman game yang lebih baik.";
+"alert_old_player_wwan" = "Unduh semua sumber daya sekaligus (%.2fMB) untuk pengalaman game yang lebih baik. Kamu sedang menggunakan data seluler. Unduh sekarang?";
+"alert_resource_failed" = "Gagal memuat sumber daya: MD5 tidak cocok";
+"alert_restart_option"  = "Update selesai. Mulai ulang game dan muat versi yang baru?";
+"alert_restart_force"   = "Update selesai. Silakan mulai ulang game.";
+"alert_appstore"        = "Ada versi baru game ini di App Store. Ingin membukanya untuk memulai update?";
+"alert_sdk_add_error"   = "Integrasi SDK eror. Saluran Loveota no. (Info.plist->LEBIAN_APPID) dan area publikasi SDK terpilih (lebianFlag.xml->selected_area) tidak sesuai.";

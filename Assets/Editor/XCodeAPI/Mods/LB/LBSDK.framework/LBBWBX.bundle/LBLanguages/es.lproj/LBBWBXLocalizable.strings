@@ -1,0 +1,53 @@
+/*
+ LBBWBX.strings
+ LanguageTest
+ 
+ Created by 荀江涛 on 16/10/25.
+ Copyright © 2016年 xunjiangtao. All rights reserved.
+ */
+/*wifi*/
+"split_wifi_fore_download"  = "El juego tiene que descargar %.2fMB de recursos. Estás conectado a una red Wi-Fi y es necesaria la actualización para jugar. ¿Descargar ahora?";
+"split_wifi_back_download"  = "El juego tiene que descargar %.2fMB de recursos. Estás conectado a una red Wi-Fi. ¿Quieres descargarlos en segundo plano?";
+"hotfix_wifi_fore_download" = "El juego tiene que descargar un paquete de actualización (%.2fMB). Estás conectado a una red Wi-Fi. ¿Quieres descargarlo ahora?";
+"hotfix_wifi_back_download" = "El juego tiene que descargar recursos de actualización (%.2fMB). Estás conectado a una red Wi-Fi. ¿Quieres descargarlos en segundo plano?";
+/*wwan*/
+"split_wwan_fore_download"  = "El juego tiene que descargar %.2fMB de recursos. Estás usando datos móviles y es necesaria la actualización para jugar. ¿Descargar ahora?";
+"split_wwan_back_download"  = "El juego tiene que descargar %.2fMB de recursos. Estás usando datos móviles. ¿Quieres descargarlos en segundo plano?";
+"hotfix_wwan_fore_download" = "El juego tiene que descargar un paquete de actualización (a%.2fMB). Estás usando datos móviles. ¿Quieres descargarlo ahora?";
+"hotfix_wwan_back_download" = "El juego tiene que descargar recursos de actualización (%.2fMB). Estás usando datos móviles. ¿Quieres descargarlos en segundo plano?";
+/*unReach*/
+"alert_noReachable" = "Error de conexión. Comprueba tu conexión a Internet.";
+/*title*/
+"title_connectServer"             = "Conectando al servidor...";
+"title_resource_downloading"      = "Descargando recursos...";
+"title_network_error"             = "Se perdió la conexión";
+"title_resource_downloadFailed"   = "Error de descarga. Comprueba tu conexión a Internet.";
+"title_resource_downloadFinished" = "Descarga completada";
+"title_resource_unzip"            = "Extrayendo... (Esto no consume datos móviles.)";
+"title_resource_unzip_failed"     = "Error al extraer. Vuelve a descargarlo.";
+"title_resource_combining"        = "Consolidando recursos... (No cierres el juego.)";
+"title_resource_combine_failed"   = "No se pudieron consolidar los recursos.";
+"title_resource_combined"         = "Recursos consolidados";
+"title_resource_allFinished"      = "Cargando el juego. Espera unos momentos.";
+/*button*/
+"button_ok" = "Sí";
+"button_no" = "No";
+"button_download_now" = "Descargar ahora";
+"button_download_background" = "Descargar en segundo plano";
+"button_download_later" = "Más tarde";
+"button_continue_game" = "Seguir jugando";
+"button_exitGame" = "Salir";
+"button_confirm" = "Aceptar";
+"button_retry" = "Vuelve a intentarlo";
+"button_jumpAppStore" = "Ir a la tienda";
+/*other*/
+"alert_space_notEnough" = "No tienes suficiente espacio de almacenamiento. Libera el espacio necesario y vuelve a intentarlo.";
+"alert_lowSpeed"        = "La descarga de recursos del juego en segundo plano es lenta. Esto afecta la experiencia de juego. ¿Quieres descargar todos los recursos de una vez (%.2fMB)?";
+"alert_resourceEnd"     = "Tienes que descargar %.2fMB de recursos para seguir jugando. Te recomendamos que te conectes una red Wi-Fi para una mejor experiencia de juego. ¿Quieres seguir jugando?";
+"alert_old_player"      = "Descarga todos los recursos de una vez (%.2fMB) para una mejor experiencia de juego.";
+"alert_old_player_wwan" = "Descarga todos los recursos de una vez (%.2fMB) para una mejor experiencia de juego. Estás usando datos móviles. ¿Quieres descargarlos ahora?";
+"alert_resource_failed" = "No se pudieron cargar los recursos: MD5 incompatible";
+"alert_restart_option"  = "Actualización completada. ¿Quieres reiniciar el juego y cargar la versión nueva?";
+"alert_restart_force"   = "Actualización completada. Reinicia el juego.";
+"alert_appstore"        = "Hay una versión nueva del juego en la App Store. ¿Quieres ir para actualizar?";
+"alert_sdk_add_error"   = "Error de integración del SDK. El canal Loveota n.° (Info.plist->LEBIAN_APPID) y el área de publicación del SDK seleccionada (lebianFlag.xml->selected_area) no coinciden.";

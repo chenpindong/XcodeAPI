@@ -1,0 +1,53 @@
+/*
+ LBBWBX.strings
+ LanguageTest
+ 
+ Created by 荀江涛 on 16/10/25.
+ Copyright © 2016年 xunjiangtao. All rights reserved.
+ */
+/*wifi*/
+"split_wifi_fore_download"  = "Oyun %.2fMB kaynak indirmesi gerektiriyor. Kablosuz Ağa bağlısın ve oyuna girmek için güncelleme yapılmalı. Şimdi indir?";
+"split_wifi_back_download"  = "Oyun %.2fMB kaynak indirmesi gerektiriyor. Kablosuz Ağa bağlısın. Arka planda indirmek istiyor musun?";
+"hotfix_wifi_fore_download" = "Oyunun güncelleme paketi indirmesi gerekiyor (%.2fMB). Kablosuz Ağa bağlısın. Şimdi indir?";
+"hotfix_wifi_back_download" = "Oyunun güncelleme kaynaklarını (%.2fMB) indirmesi gerekiyor. Kablosuz Ağa bağlısın. Arka planda indirmek istiyor musun?";
+/*wwan*/
+"split_wwan_fore_download"  = "Oyunun %.2fMB kaynak indirmesi gerekiyor. Mobil veri kullanıyorsun ve oyuna girmek için güncelleme yapılmalı. Şimdi indir?";
+"split_wwan_back_download"  = "Oyun %.2fMB kaynak indirmesi gerekiyor. Mobil veri kullanıyorsun. Arka planda indirmek istiyor musun?";
+"hotfix_wwan_fore_download" = "Oyunun güncelleme paketi indirmesi gerekiyor (%.2fMB). Mobil veri kullanıyorsun. Şimdi indir?";
+"hotfix_wwan_back_download" = "Oyunun güncelleme kaynaklarını (%.2fMB) indirmesi gerekiyor. Mobil veri kullanıyorsun. Arka planda indirmek istiyor musun?";
+/*unReach*/
+"alert_noReachable" = "Bağlantı kesildi. Lütfen internet bağlantını kontrol et.";
+/*title*/
+"title_connectServer"             = "Sunucuya bağlanılıyor...";
+"title_resource_downloading"      = "Kaynaklar indiriliyor...";
+"title_network_error"             = "Bağlantı kesildi";
+"title_resource_downloadFailed"   = "İndirme başarısız. Lütfen internet bağlantını kontrol et.";
+"title_resource_downloadFinished" = "İndirme Tamamlandı";
+"title_resource_unzip"            = "Paket açılıyor (Bu işlem mobil veri harcamaz)...";
+"title_resource_unzip_failed"     = "Paket açılamadı. Lütfen tekrar indir.";
+"title_resource_combining"        = "Kaynaklar toplanıyor (lütfen oyunu kapatma)...";
+"title_resource_combine_failed"   = "Kaynaklar toplanamadı.";
+"title_resource_combined"         = "Kaynaklar toplandı.";
+"title_resource_allFinished"      = "Oyun yükleniyor, lütfen bekle.";
+/*button*/
+"button_ok" = "Evet";
+"button_no" = "Hayır";
+"button_download_now" = "Şimdi indir";
+"button_download_background" = "Arka planda indir";
+"button_download_later" = "Sonra";
+"button_continue_game" = "Oyuna devam et";
+"button_exitGame" = "Çık";
+"button_confirm" = "Tamam";
+"button_retry" = "Tekrar dene";
+"button_jumpAppStore" = "Dükkâna Git";
+/*other*/
+"alert_space_notEnough" = "Depo alanı yetersiz. Lütfen biraz yer açıp tekrar dene.";
+"alert_lowSpeed"        = "Oyun kaynaklarının arka planda indirilmesi yavaş gidiyor ve oyun tecrübesini etkileyecek. Tüm kaynakları tek seferde indirmek ister misin (%.2fMB) ?";
+"alert_resourceEnd"     = "Oynamaya devam etmek için %.2fMB kaynak indirmen gerek. En iyi oyun tecrübesi için Kablosuz Ağa bağlanmanı öneririz. Oyuna devam etmek istiyor musun?";
+"alert_old_player"      = "Daha iyi bir oyun tecrübesi için tüm kaynakları tek seferde indir (%.2fMB).";
+"alert_old_player_wwan" = "Daha iyi bir oyun tecrübesi için tüm kaynakları tek seferde indir (%.2fMB). Mobil veri kullanıyorsun. Şimdi indir?";
+"alert_resource_failed" = "Kaynaklar yüklenemiyor: MD5 uyumsuz.";
+"alert_restart_option"  = "Güncelleme tamamlandı. Oyunu yeniden başlatıp yeni sürümü yüklemek ister misin?";
+"alert_restart_force"   = "Güncelleme tamamlandı. Lütfen oyunu yeniden başlat.";
+"alert_appstore"        = "Oyunun Uygulama Mağazasında yeni bir sürümü mevcut. Mağazaya gidip güncellemek istiyor musun?";
+"alert_sdk_add_error"   = "SDK entegrasyon hatası. The Loveota kanalı no. (Info.plist->LEBIAN_APPID) ve seçili SDK yayımlama bölgesi (lebianFlag.xml->selected_area) eşleşmiyor.";

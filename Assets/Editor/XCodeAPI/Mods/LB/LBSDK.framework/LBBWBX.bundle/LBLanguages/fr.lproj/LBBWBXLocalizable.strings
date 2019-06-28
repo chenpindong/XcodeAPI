@@ -1,0 +1,53 @@
+/*
+ LBBWBX.strings
+ LanguageTest
+ 
+ Created by 荀江涛 on 16/10/25.
+ Copyright © 2016年 xunjiangtao. All rights reserved.
+ */
+/*wifi*/
+"split_wifi_fore_download"  = "Le jeu nécessite le téléchargement de %.2f Mo de données. Vous êtes connecté au Wi-Fi et la mise à jour est requise pour accéder au jeu. Voulez-vous les télécharger ?";
+"split_wifi_back_download"  = "Le jeu nécessite le téléchargement de %.2f Mo de données. Vous êtes connecté au Wi-Fi. Voulez-vous lancer le téléchargement en arrière-plan ?";
+"hotfix_wifi_fore_download" = "Le jeu nécessite le téléchargement d'un pack de mise à jour (%.2f Mo). Vous êtes connecté au Wi-Fi. Voulez-vous le télécharger ?";
+"hotfix_wifi_back_download" = "Le jeu nécessite le téléchargement d'une mise à jour (%.2f Mo). Vous êtes connecté au Wi-Fi. Voulez-vous lancer le téléchargement en arrière-plan ?";
+/*wwan*/
+"split_wwan_fore_download"  = "Le jeu nécessite le téléchargement de %.2f Mo de données. Vous utilisez les données mobiles et la mise à jour est requise pour accéder au jeu. Voulez-vous les télécharger ?";
+"split_wwan_back_download"  = "Le jeu nécessite le téléchargement de %.2f Mo de données. Vous utilisez les données mobiles. Voulez-vous lancer le téléchargement en arrière-plan ?";
+"hotfix_wwan_fore_download" = "Le jeu nécessite le téléchargement d'un pack de mise à jour (%.2f Mo). Vous utilisez les données mobiles. Voulez-vous le télécharger ?";
+"hotfix_wwan_back_download" = "Le jeu nécessite le téléchargement d'une mise à jour (%.2f Mo). Vous utilisez les données mobiles. Voulez-vous lancer le téléchargement en arrière-plan ?";
+/*unReach*/
+"alert_noReachable" = "Échec de la connexion. Veuillez vérifier votre connexion Internet.";
+/*title*/
+"title_connectServer"             = "Connexion au serveur en cours";
+"title_resource_downloading"      = "Téléchargement des données en cours";
+"title_network_error"             = "Connexion perdue";
+"title_resource_downloadFailed"   = "Échec du téléchargement. Veuillez vérifier votre connexion Internet.";
+"title_resource_downloadFinished" = "Téléchargement terminé";
+"title_resource_unzip"            = "Décompression des données en cours (ceci ne consomme pas de données mobiles).";
+"title_resource_unzip_failed"     = "Échec de la décompression. Veuillez relancer le téléchargement.";
+"title_resource_combining"        = "Consolidation des données en cours (veuillez ne pas fermer le jeu).";
+"title_resource_combine_failed"   = "Échec de la consolidation des données.";
+"title_resource_combined"         = "Données consolidées.";
+"title_resource_allFinished"      = "Chargement du jeu en cours, veuillez patienter.";
+/*button*/
+"button_ok" = "Oui";
+"button_no" = "Non";
+"button_download_now" = "Télécharger maintenant";
+"button_download_background" = "Télécharger en arrière-plan";
+"button_download_later" = "Peut-être plus tard";
+"button_continue_game" = "Continuer à jouer";
+"button_exitGame" = "Quitter";
+"button_confirm" = "OK";
+"button_retry" = "Réessayer";
+"button_jumpAppStore" = "Magasin";
+/*other*/
+"alert_space_notEnough" = "Espace de stockage insuffisant. Veuillez libérer de l'espace et réessayer.";
+"alert_lowSpeed"        = "Le téléchargement des données en arrière-plan est lent et peut affecter l'expérience de jeu. Voulez-vous télécharger toutes les données en une seule fois (%.2f Mo) ?";
+"alert_resourceEnd"     = "Vous devez télécharger %.2f Mo de données pour continuer à jouer. Nous vous conseillons de vous connecter au Wi-Fi pour une meilleure expérience de jeu. Voulez-vous continuer à jouer ?";
+"alert_old_player"      = "Téléchargez toutes les données en une fois (%.2f Mo) pour une meilleure expérience de jeu.";
+"alert_old_player_wwan" = "Téléchargez toutes les données en une fois (%.2f Mo) pour une meilleure expérience de jeu. Vous utilisez des données mobiles. Voulez-vous lancer le téléchargement ?";
+"alert_resource_failed" = "Échec du chargement des données : MD5 incompatible.";
+"alert_restart_option"  = "Mise à jour terminée. Voulez-vous redémarrer le jeu et charger la nouvelle version ?";
+"alert_restart_force"   = "Mise à jour terminée. Veuillez redémarrer le jeu.";
+"alert_appstore"        = "Une nouvelle version du jeu est disponible dans l'App Store. Voulez-vous y accéder pour commencer la mise à jour ?";
+"alert_sdk_add_error"   = "Erreur d'intégration SDK. La chaîne Loveota n. (Info.plist->LEBIAN_APPID) et la zone de publication SDK sélectionnée (lebianFlag.xml->selected_area) ne correspondent pas.";

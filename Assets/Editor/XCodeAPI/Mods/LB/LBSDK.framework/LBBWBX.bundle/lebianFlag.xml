@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flaginfo>
+    <!--
+     //示例是默认Unity游戏做边玩边下业务的情况,接入SDK后，lebian_worktype 在0 1 2模式下需要交给乐变技术支持进行资源分包才能使用，3直接上传到卓盟后台“iOS压缩”做压缩处理，4表示不做分包处理，单纯资源热更（需要打开资源热更开关, hotfix_enable设置为true）
+     use_sdk         :  是否使用乐变SDK，为false时，SDK将不起任何作用
+     
+     selected_area   :  表示此App的发布地区，需要和卓盟后台(区分 国内后台和海外后台)保持一致。其中0表示国内，1表示非台湾的海外地区，2表示台湾地区
+     
+     lebian_worktype :  表示SDK的工作模式: 其中 0 代表二次下载(一次性把游戏资源全部下载完后进入游戏), 1 代表边玩边下(玩家在后台进行边玩边下载), 2 代表先二次加载再边玩边下, 3 代表 包体显示优化（压缩资源包), 4 代表整包更新（如果没有分包，只需要整包更新，一定要设置为4）
+     
+     /***************************   游戏分包热更功能控制    *****************************/
+     
+     hotfix_enable   :  表示是否使用资源热更新，默认为false，需要使用资源热更时打开此开关，详情查看热更文档。
+     
+     resource_dir    :  表示您的游戏资源文件夹（默认为Unity游戏打成ipa包后的Data目录，cocos游戏都需要重新指定），如果有多个请用分号分割开来,例如 "res/;src/"
+     如果开启了热更功能，上传ipa包到乐变热更新后台时，需要保持目录名一致，我们将指定这个目录，进行资源的增量更新。
+     
+     bigFiles        :  为了有效减少包体大小，可以设定这个参数，指定的大文件将会被拆分成碎块小资源分包（仅在lebian_worktype为1和2模式生效）如果有多个请用分号(;)分割开来,例如 "Data/resources.assets;Data/resources.assets.resS"
+    
+     open_statistics :  表示是否使用统计功能，默认为true，我们会统计用户下载完成率，更新进度等数据。
+     
+     hotfix_pre_request  :  是否在游戏加载前也检查更新，默认为true，这个开关只在hotfix_enable打开的情况下有效。
+     
+     lebian_hotfix_request  :  默认为true，如果需要关闭乐变自动触发热更请求，改成手动调用热更请求，即关闭此开关，将其设置为false。
+     
+     /*************************   游戏弹窗控制  *************************************/
+     
+     old_player      :  当玩家为老用户时提示一次性加载所有资源，默认开启
+     low_speed       :  下载网速低的时候提示用户一次性加载所有资源，默认关闭
+     wwan_first      :  边玩边下模式下，流量网络进游戏后的第一个提示框，默认开启
+     wifi_alert      :  二次加载模式下，在wifi下，一进游戏也会弹出需要下载资源的提示框，默认开启
+     
+     /*************************  游戏非常规功能控制  ***********************************/
+    
+     appStoreId      :  此app在appstore里的id，使用我们热更时如果跳转appstore的功能需要我们来做，就需要设置，如果没有这种需求，可忽略
+     download_tip_color    :  在前台一次性下载所有资源界面，提示语的字体颜色
+     download_data_color   :  在前台一次性下载所有资源界面，下载进度数据的字体颜色
+     
+     -->
+    <sdkflag flag="8.0.1" />
+    <patch flag="1" />
+    <globalsettings
+        
+        use_sdk = "true"
+        selected_area = "1"
+        lebian_worktype = "0"
+        
+        hotfix_enable = "false"
+        resource_dir = "Data/"
+        bigFiles = "Data/resources.assets;Data/resources.assets.resS"
+        hotfix_pre_request = "true"
+        open_statistics = "true"
+        lebian_hotfix_request = "true"
+        
+        old_player = "true"
+        low_speed = "false"
+        wwan_first = "true"
+        wifi_alert = "true"
+        
+        appStoreId = ""
+        download_tip_color = "#A9A9A9"
+        download_data_color = "#FFFFFF"
+        ></globalsettings>
+</flaginfo>
+

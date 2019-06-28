@@ -1,0 +1,53 @@
+/*
+ LBBWBX.strings
+ LanguageTest
+ 
+ Created by 荀江涛 on 16/10/25.
+ Copyright © 2016年 xunjiangtao. All rights reserved.
+ */
+/*wifi*/
+"split_wifi_fore_download"  = "게임은 자원%.2fM을 다운로드해야 합니다. 현재 Wifi 네트워크입니다. 지금 바로 다운로드하시겠습니까?";
+"split_wifi_back_download"  = "게임은 자원%.2fM을 다운로드해야 합니다. 현재 Wifi 네트워크입니다. 지금 바로 다운로드하시겠습니까?";
+"hotfix_wifi_fore_download" = "신규 버전이 확인되었습니다.(파일 용량:%.2fM) 업데이트를 진행하겠습니까?";
+"hotfix_wifi_back_download" = "신규 버전이 확인되었습니다.(파일 용량:%.2fM) 업데이트를 진행하겠습니까?";
+/*wwan*/
+"split_wwan_fore_download"  = "게임은 자원%.2fM을 다운로드해야 합니다. 현재 wifi에 연결된 상태가 아니므로 데이터를 소모합니다. 다운로드하겠습니까?";
+"split_wwan_back_download"  = "게임은 자원%.2fM을 다운로드해야 합니다. 현재 wifi에 연결된 상태가 아니므로 데이터를 소모합니다. 다운로드하겠습니까?";
+"hotfix_wwan_fore_download" = "신규 버전이 확인되었습니다. 현재 wifi에 연결된 상태가 아니므로 데이터를 소모합니다.(파일 용량%.2fM) 업데이트를 진행하겠습니까?";
+"hotfix_wwan_back_download" = "신규 버전이 확인되었습니다. 현재 wifi에 연결된 상태가 아니므로 데이터를 소모합니다.(파일 용량%.2fM) 업데이트를 진행하겠습니까?";
+/*unReach*/
+"alert_noReachable" = "연결 실패, 네트워크 상태를 확인하세요.";
+/*title*/
+"title_connectServer"             = "서버 연결 중... 잠시 기다려 주세요";
+"title_resource_downloading"      = "다운로드 중...";
+"title_network_error"             = "인터넷이 끊겼습니다";
+"title_resource_downloadFailed"   = "다운로드 실패, 네트워크 연결을 확인하세요";
+"title_resource_downloadFinished" = "다운로드 완료";
+"title_resource_unzip"            = "리소스 압축 푸는중입니다.잠시만 기다려 주세요.";
+"title_resource_unzip_failed"     = "리소스 압축 풀기 실패";
+"title_resource_combining"        = "자원 통합... 게임 닫지 마세요";
+"title_resource_combine_failed"   = "자원 통합 실패";
+"title_resource_combined"         = "자원 통합 완료";
+"title_resource_allFinished"      = "로딩 중... 잠시만 기다려 주세요.";
+/*button*/
+"button_ok" = "예";
+"button_no" = "아니요";
+"button_download_now" = "다운로드";
+"button_download_background" = "백그라운드 다운";
+"button_download_later" = "나중에 하기";
+"button_continue_game" = "계속하기";
+"button_exitGame" = "거절";
+"button_confirm" = "확인";
+"button_retry" = "재시도";
+"button_jumpAppStore" = "상점으로 옮기다";
+/*other*/
+"alert_space_notEnough" = "저장 공간이 부족합니다. 파일 정리 후 다시 시도하세요.";
+"alert_lowSpeed"        = "일괄 다운로드（%.2fM）로 원활한 게임을 즐겨보세요!";
+"alert_resourceEnd"     = "게임을 계속하려면 리소스 다운로드가 필요합니다.(%.2fM) wifi에 연결하여 정상적인 게임을 진행하길 권장합니다. 계속하여 진행하겠습니까?";
+"alert_old_player"      = "일괄 다운로드（%.2fM）로 원활한 게임을 즐겨보세요!";
+"alert_old_player_wwan" = "일괄 다운로드（%.2fM）로 원활한 게임을 즐겨보세요!";
+"alert_resource_failed" = "리소스 다운로드 실패: MD5 불일치";
+"alert_restart_option"  = "업데이트가 완료되었습니다. 게임을 다시 불러올지 여부입니다?";
+"alert_restart_force"   = "업데이트 완료, 게임을 재부팅하세요.";
+"alert_appstore"        = "AppStore에 새로운 버전이 올라와 업데이트될지 여부입니다";
+"alert_sdk_add_error"   = "sdk集成错误，乐变渠道号(Info.plist->LEBIAN_APPID)和sdk选择的发布地区(lebianFlag.xml->selected_area)不匹配";
