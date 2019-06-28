@@ -84,9 +84,9 @@ public class XcodeProjectSetting : ScriptableObject
     //Entitlement文件路径
     [SerializeField]
     public string EntitlementFilePath = "hw.entitlements";
-    //要拷贝到XCode内的文件的路径
+    //XCodeAPI文件的路径
     [SerializeField]
-    public string XcodeAPIDirectoryPath = "Assets/Editor";
+    public string XcodeAPIDirectoryPath = "Assets/Editor/XCodeAPI";
     //AppleDevelopment内TeamID
     [SerializeField]
     public string DevelopmentTeam = "K3G2K7L99P";

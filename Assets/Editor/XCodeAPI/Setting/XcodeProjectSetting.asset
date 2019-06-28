@@ -18,7 +18,7 @@ MonoBehaviour:
   EnableObjcExceptions: 1
   EnableGameCenter: 1
   EntitlementFilePath: hw.entitlements
-  XcodeAPIDirectoryPath: Assets/GameMain/Scripts/Editor/XCodeAPI
+  XcodeAPIDirectoryPath: Assets/Editor/XCodeAPI
   DevelopmentTeam: K3G2K7L99P
   ProvisioningProfile: sd_product_20180716
   CodeSignIdentity: 'iPhone Distribution: Jiu Wanli network technology (Shanghai)
