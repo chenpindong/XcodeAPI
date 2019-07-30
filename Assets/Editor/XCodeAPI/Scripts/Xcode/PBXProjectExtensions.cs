@@ -324,6 +324,9 @@ namespace ChillyRoom.UnityEditor.iOS.Xcode.Extensions
 
                 phase.files.AddGUID(frameworkEmbedFileData.guid);
             }
+
+            frameworkEmbedFileData.codeSignOnCopy = true;
+            frameworkEmbedFileData.removeHeadersOnCopy = true;
         }
     }
 } // namespace UnityEditor.iOS.Xcode

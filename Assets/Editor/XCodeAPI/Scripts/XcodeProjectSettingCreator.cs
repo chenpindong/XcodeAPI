@@ -16,6 +16,6 @@ public class XcodeProjectSettingCreator
 
     public static string GetCurrentFilePath()
     {
-        return "Assets/GameMain/Scripts/Editor/XCodeAPI/Setting/XcodeProjectSetting.asset";
+        return "Assets/Editor/XCodeAPI/Setting/XcodeProjectSetting.asset";
     }
 }

@@ -58,7 +58,19 @@ public static class DirectoryProcessor
         foreach (string directoryPath in Directory.GetDirectories(unityDirectoryPath))
         {
             string directoryName = Path.GetFileName(directoryPath);
-            if (!directoryName.Contains(ExtensionName.LANGUAGE))
+            if (directoryName.Contains(ExtensionName.LANGUAGE) && needToAddBuild)
+            {
+                //特殊化处理本地语言，暂时官方PBXProject不支持AddLocalization方法，如果需要，则必须自己扩充
+                string relativePath = Path.Combine(currentDirectoryPath, directoryName);
+                CopyAndAddBuildToXcode(pbxProject, targetGuid, copyDirectoryPath, buildPath, relativePath, embedFrameworks, false);
+                string[] dirs = Directory.GetDirectories(Path.Combine(xcodeDirectoryPath, directoryName));
+                if (dirs.Length > 0)
+                {
+                    string fileName = Path.GetFileName(Directory.GetFiles(dirs[0], "*.strings")[0]);
+                    AddLocalizedStrings(pbxProject, buildPath, fileName, directoryPath, directoryName);
+                }
+            }
+            else
             {
                 bool nextNeedToAddBuild = needToAddBuild;
                 if (directoryName.Contains(ExtensionName.FRAMEWORK) || directoryName.Contains(ExtensionName.BUNDLE) || directoryName == XcodeProjectSetting.IMAGE_XCASSETS_DIRECTORY_NAME)
@@ -66,7 +78,7 @@ public static class DirectoryProcessor
                     nextNeedToAddBuild = false;
                 }
                 CopyAndAddBuildToXcode(pbxProject, targetGuid, copyDirectoryPath, buildPath, Path.Combine(currentDirectoryPath, directoryName), embedFrameworks, nextNeedToAddBuild);
-                if (directoryName.Contains(ExtensionName.FRAMEWORK) || directoryName.Contains(ExtensionName.BUNDLE))
+                if (directoryName.Contains(ExtensionName.FRAMEWORK))
                 {
                     string relativePath = Path.Combine(currentDirectoryPath, directoryName);
                     string fileGuid = pbxProject.AddFile(relativePath, relativePath, PBXSourceTree.Source);
@@ -78,17 +90,12 @@ public static class DirectoryProcessor
                         PBXProjectExtensions.AddFileToEmbedFrameworks(pbxProject, targetGuid, fileGuid);
                     }
                 }
-            }
-            else
-            {
-                //特殊化处理本地语言，暂时官方PBXProject不支持AddLocalization方法，如果需要，则必须自己扩充
-                string relativePath = Path.Combine(currentDirectoryPath, directoryName);
-                CopyAndAddBuildToXcode(pbxProject, targetGuid, copyDirectoryPath, buildPath, relativePath, embedFrameworks, false);
-                string[] dirs = Directory.GetDirectories(Path.Combine(xcodeDirectoryPath, directoryName));
-                if (dirs.Length > 0)
+                else if (directoryName.Contains(ExtensionName.BUNDLE) && needToAddBuild)
                 {
-                    string fileName = Path.GetFileName(Directory.GetFiles(dirs[0], "*.strings")[0]);
-                    AddLocalizedStrings(pbxProject, buildPath, fileName, directoryPath, directoryName);
+                    string relativePath = Path.Combine(currentDirectoryPath, directoryName);
+                    string fileGuid = pbxProject.AddFile(relativePath, relativePath, PBXSourceTree.Source);
+                    pbxProject.AddFileToBuild(targetGuid, fileGuid);
+                    pbxProject.AddBuildProperty(targetGuid, XcodeProjectSetting.FRAMEWORK_SEARCH_PATHS_KEY, XcodeProjectSetting.PROJECT_ROOT + currentDirectoryPath);
                 }
             }
         }
