@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using ChillyRoom.UnityEditor.iOS.Xcode;
 using System.IO;
+using UnityEditor;
 
 //Info.Plist修改设置
 public static class InfoPlistProcessor
@@ -103,6 +104,12 @@ public static class InfoPlistProcessor
         }
     }
 
+    private static void SetBundleName(PlistDocument plist)
+    {
+        PlistElementDict rootDict = plist.root;
+        rootDict.SetString(BundleNameInfo.Key, PlayerSettings.productName);
+    }
+
     public static void SetInfoPlist(string buildPath, XcodeProjectSetting setting)
     {
         PlistDocument plist = GetInfoPlist(buildPath);
@@ -110,6 +117,7 @@ public static class InfoPlistProcessor
         SetApplicationQueriesSchemes(plist, setting.ApplicationQueriesSchemes);
         SetBackgroundModes(plist, setting.BackgroundModes);
         SetURLSchemes(plist, setting.BundleUrlTypeList);
+        SetBundleName(plist);
 
         if (setting.EnableGameCenter)
         {
@@ -124,5 +132,10 @@ public static class InfoPlistProcessor
     {
         internal static readonly string Key = "UIRequiredDeviceCapabilities";
         internal static readonly List<string> Value = new List<string> { "armv7", "gamekit" };
+    }
+
+    internal class BundleNameInfo
+    {
+        internal static readonly string Key = "CFBundleName";
     }
 }

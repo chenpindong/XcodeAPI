@@ -1,5 +1,6 @@
 ﻿using ChillyRoom.UnityEditor.iOS.Xcode;
 using System.IO;
+using UnityEditor;
 
 public class CapabilityProcessor
 {
@@ -69,6 +70,14 @@ public class CapabilityProcessor
         m_Project.AddCapability(m_TargetGuid, PBXCapabilityType.GameCenter);
     }
 
+    public void AddKeychainSharing()
+    {
+        PlistElementArray temp = new PlistElementArray();
+        temp.AddString("$(AppIdentifierPrefix)" + PlayerSettings.bundleIdentifier);
+        GetOrCreateEntitlementDoc().root[KeychainEntitlements.Key] = temp;
+        m_Project.AddCapability(m_TargetGuid, PBXCapabilityType.KeychainSharing);
+    }
+
     /// <summary>
     /// Add Push (or remote) Notifications capability to the project
     /// </summary>
@@ -92,5 +101,10 @@ public class CapabilityProcessor
         internal static readonly string Key = "aps-environment";
         internal static readonly string DevelopmentValue = "development";
         internal static readonly string ProductionValue = "production";
+    }
+
+    internal class KeychainEntitlements
+    {
+        internal static readonly string Key = "keychain-access-groups";
     }
 }
