@@ -46,6 +46,7 @@ public class XCodeProjectMod : MonoBehaviour
         CapabilityProcessor capProcessor = new CapabilityProcessor(pbxProject, buildPath, pbxProjPath, setting.EntitlementFilePath, targetGuid);
         capProcessor.AddInAppPurchase();
         capProcessor.AddPushNotifications(true);
+        capProcessor.AddKeychainSharing();
         if (setting.EnableGameCenter)
         {
             capProcessor.AddGameCenter();

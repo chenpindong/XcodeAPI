@@ -26,7 +26,21 @@ public static class InfoPlistProcessor
         for (int i = 0; i < count; i++)
         {
             XcodeProjectSetting.PrivacySensiticeData data = privacySensiticeDataList[i];
-            rootDict.SetString(data.key, data.description);
+            switch (data.type)
+            {
+                case XcodeProjectSetting.NValueType.String:
+                    rootDict.SetString(data.key, data.value);
+                    break;
+                case XcodeProjectSetting.NValueType.Int:
+                    rootDict.SetInteger(data.key, int.Parse(data.value));
+                    break;
+                case XcodeProjectSetting.NValueType.Bool:
+                    rootDict.SetBoolean(data.key, bool.Parse(data.value));
+                    break;
+                default:
+                    rootDict.SetString(data.key, data.value);
+                    break;
+            }
         }
     }
 

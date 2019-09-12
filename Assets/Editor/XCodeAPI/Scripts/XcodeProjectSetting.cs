@@ -182,18 +182,28 @@ public class XcodeProjectSetting : ScriptableObject
     public List<string> ApplicationQueriesSchemes = new List<string>() { };
 
     #region iOS10新的特性
+    public enum NValueType
+    {
+        String,
+        Int,
+        Bool,
+    }
+
     [System.Serializable]
     public struct PrivacySensiticeData
     {
         [SerializeField]
         public string key;
         [SerializeField]
-        public string description;
+        public string value;
+        [SerializeField]
+        public NValueType type;
 
-        public PrivacySensiticeData(string key, string description)
+        public PrivacySensiticeData(string key, string value, NValueType type)
         {
             this.key = key;
-            this.description = description;
+            this.value = value;
+            this.type = type;
         }
     }
 

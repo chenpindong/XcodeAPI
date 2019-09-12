@@ -62,12 +62,12 @@ MonoBehaviour:
   ApplicationQueriesSchemes: []
   privacySensiticeData:
   - key: NSCalendarsUsageDescription
-    description: Calendar usage required for in-game events.
+    value: Calendar usage required for in-game events.
   - key: NSPhotoLibraryUsageDescription
-    description: Photo Library usage required for sharing in-game footage & screenshots.
+    value: Photo Library usage required for sharing in-game footage & screenshots.
   - key: NSMicrophoneUsageDescription
-    description: Microphone usage required for live broadcasting service.
+    value: Microphone usage required for live broadcasting service.
   - key: NSCameraUsageDescription
-    description: Camera usage required for live broadcasting service.
+    value: Camera usage required for live broadcasting service.
   BundleUrlTypeList: []
   BackgroundModes: []

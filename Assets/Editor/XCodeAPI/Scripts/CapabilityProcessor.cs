@@ -73,7 +73,7 @@ public class CapabilityProcessor
     public void AddKeychainSharing()
     {
         PlistElementArray temp = new PlistElementArray();
-        temp.AddString("$(AppIdentifierPrefix)" + PlayerSettings.bundleIdentifier);
+        temp.AddString("$(AppIdentifierPrefix)" + PlayerSettings.applicationIdentifier);
         GetOrCreateEntitlementDoc().root[KeychainEntitlements.Key] = temp;
         m_Project.AddCapability(m_TargetGuid, PBXCapabilityType.KeychainSharing);
     }
