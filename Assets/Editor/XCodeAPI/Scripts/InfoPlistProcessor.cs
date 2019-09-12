@@ -124,6 +124,31 @@ public static class InfoPlistProcessor
         rootDict.SetString(BundleNameInfo.Key, PlayerSettings.productName);
     }
 
+    private static void SetTransportSecurity(PlistDocument plist)
+    {
+        PlistElementDict transportSecurity;
+        if (plist.root.values.ContainsKey(TransportSecurityInfo.Key))
+            transportSecurity = plist.root[TransportSecurityInfo.Key].AsDict();
+        else
+            transportSecurity = plist.root.CreateDict(TransportSecurityInfo.Key);
+
+        foreach (var item in TransportSecurityInfo.Value)
+        {
+            if (item.Value.GetType() == typeof(bool))
+            {
+                transportSecurity.SetBoolean(item.Key, (bool)item.Value);
+            }
+            else if (item.Value.GetType() == typeof(string))
+            {
+                transportSecurity.SetString(item.Key, (string)item.Value);
+            }
+            else if (item.Value.GetType() == typeof(int))
+            {
+                transportSecurity.SetInteger(item.Key, (int)item.Value);
+            }
+        }
+    }
+
     public static void SetInfoPlist(string buildPath, XcodeProjectSetting setting)
     {
         PlistDocument plist = GetInfoPlist(buildPath);
@@ -132,6 +157,7 @@ public static class InfoPlistProcessor
         SetBackgroundModes(plist, setting.BackgroundModes);
         SetURLSchemes(plist, setting.BundleUrlTypeList);
         SetBundleName(plist);
+        SetTransportSecurity(plist);
 
         if (setting.EnableGameCenter)
         {
@@ -151,5 +177,12 @@ public static class InfoPlistProcessor
     internal class BundleNameInfo
     {
         internal static readonly string Key = "CFBundleName";
+    }
+
+    //允许http请求
+    internal class TransportSecurityInfo
+    {
+        internal static readonly string Key = "NSAppTransportSecurity";
+        internal static readonly Dictionary<string, object> Value = new Dictionary<string, object>() { { "NSAllowsArbitraryLoads", true } };
     }
 }
