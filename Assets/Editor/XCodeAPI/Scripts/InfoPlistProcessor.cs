@@ -19,6 +19,11 @@ public static class InfoPlistProcessor
         return plist;
     }
 
+    /// <summary>
+    /// 设置私有数据
+    /// </summary>
+    /// <param name="plist"></param>
+    /// <param name="privacySensiticeDataList"></param>
     private static void SetPrivacySensiticeData(PlistDocument plist, List<XcodeProjectSetting.PrivacySensiticeData> privacySensiticeDataList)
     {
         PlistElementDict rootDict = plist.root;
@@ -44,6 +49,11 @@ public static class InfoPlistProcessor
         }
     }
 
+    /// <summary>
+    /// 设置白名单
+    /// </summary>
+    /// <param name="plist"></param>
+    /// <param name="_applicationQueriesSchemes"></param>
     private static void SetApplicationQueriesSchemes(PlistDocument plist, List<string> _applicationQueriesSchemes)
     {
         PlistElementArray queriesSchemes;
@@ -63,6 +73,11 @@ public static class InfoPlistProcessor
         }
     }
 
+    /// <summary>
+    /// 设置后台模式
+    /// </summary>
+    /// <param name="plist"></param>
+    /// <param name="modes"></param>
     private static void SetBackgroundModes(PlistDocument plist, List<string> modes)
     {
         int count = modes.Count;
@@ -77,6 +92,11 @@ public static class InfoPlistProcessor
         }
     }
 
+    /// <summary>
+    /// 设置url schemes地址
+    /// </summary>
+    /// <param name="plist"></param>
+    /// <param name="urlList"></param>
     private static void SetURLSchemes(PlistDocument plist, List<XcodeProjectSetting.BundleUrlType> urlList)
     {
         PlistElementArray urlTypes;
@@ -104,6 +124,10 @@ public static class InfoPlistProcessor
         }
     }
 
+    /// <summary>
+    /// 设置GameCenter
+    /// </summary>
+    /// <param name="plist"></param>
     private static void SetGameCenter(PlistDocument plist)
     {
         PlistElementArray gameCenter;
@@ -118,34 +142,56 @@ public static class InfoPlistProcessor
         }
     }
 
+    /// <summary>
+    /// 设置BundleName
+    /// </summary>
+    /// <param name="plist"></param>
     private static void SetBundleName(PlistDocument plist)
     {
         PlistElementDict rootDict = plist.root;
         rootDict.SetString(BundleNameInfo.Key, PlayerSettings.productName);
     }
 
-    private static void SetTransportSecurity(PlistDocument plist)
+    /// <summary>
+    /// 设置ATS（是否允许http）
+    /// </summary>
+    /// <param name="plist"></param>
+    /// <param name="enableATS"></param>
+    private static void SetATS(PlistDocument plist, bool enableATS)
     {
-        PlistElementDict transportSecurity;
-        if (plist.root.values.ContainsKey(TransportSecurityInfo.Key))
-            transportSecurity = plist.root[TransportSecurityInfo.Key].AsDict();
+        PlistElementDict atsDict;
+        if (plist.root.values.ContainsKey(XcodeProjectSetting.ATS_KEY))
+            atsDict = plist.root[XcodeProjectSetting.ATS_KEY].AsDict();
         else
-            transportSecurity = plist.root.CreateDict(TransportSecurityInfo.Key);
+            atsDict = plist.root.CreateDict(XcodeProjectSetting.ATS_KEY);
 
-        foreach (var item in TransportSecurityInfo.Value)
+        atsDict.SetBoolean(XcodeProjectSetting.ALLOWS_ARBITRARY_LOADS_KEY, enableATS);
+    }
+
+    /// <summary>
+    /// 设置状态栏
+    /// </summary>
+    /// <param name="plist"></param>
+    /// <param name="enable"></param>
+	public static void SetStatusBar(PlistDocument plist, bool enable)
+    {
+        plist.root.SetBoolean(XcodeProjectSetting.STATUS_HIDDEN_KEY, enable);
+        plist.root.SetBoolean(XcodeProjectSetting.STATUS_BAR_APPEARANCE_KEY, !enable);
+    }
+
+    /// <summary>
+    /// 删除开场动画
+    /// </summary>
+    /// <param name="plist"></param>
+    public static void DeleteLaunchiImagesKey(PlistDocument plist)
+    {
+        if (plist.root.values.ContainsKey(XcodeProjectSetting.UI_LAUNCHI_IMAGES_KEY))
         {
-            if (item.Value.GetType() == typeof(bool))
-            {
-                transportSecurity.SetBoolean(item.Key, (bool)item.Value);
-            }
-            else if (item.Value.GetType() == typeof(string))
-            {
-                transportSecurity.SetString(item.Key, (string)item.Value);
-            }
-            else if (item.Value.GetType() == typeof(int))
-            {
-                transportSecurity.SetInteger(item.Key, (int)item.Value);
-            }
+            plist.root.values.Remove(XcodeProjectSetting.UI_LAUNCHI_IMAGES_KEY);
+        }
+        if (plist.root.values.ContainsKey(XcodeProjectSetting.UI_LAUNCHI_STORYBOARD_NAME_KEY))
+        {
+            plist.root.values.Remove(XcodeProjectSetting.UI_LAUNCHI_STORYBOARD_NAME_KEY);
         }
     }
 
@@ -157,7 +203,12 @@ public static class InfoPlistProcessor
         SetBackgroundModes(plist, setting.BackgroundModes);
         SetURLSchemes(plist, setting.BundleUrlTypeList);
         SetBundleName(plist);
-        SetTransportSecurity(plist);
+        SetATS(plist, setting.EnableATS);
+        SetStatusBar(plist, setting.EnableStatusBar);
+        if (setting.NeedToDeleteLaunchiImagesKey)
+        {
+            DeleteLaunchiImagesKey(plist);
+        }
 
         if (setting.EnableGameCenter)
         {
@@ -177,12 +228,5 @@ public static class InfoPlistProcessor
     internal class BundleNameInfo
     {
         internal static readonly string Key = "CFBundleName";
-    }
-
-    //允许http请求
-    internal class TransportSecurityInfo
-    {
-        internal static readonly string Key = "NSAppTransportSecurity";
-        internal static readonly Dictionary<string, object> Value = new Dictionary<string, object>() { { "NSAllowsArbitraryLoads", true } };
     }
 }

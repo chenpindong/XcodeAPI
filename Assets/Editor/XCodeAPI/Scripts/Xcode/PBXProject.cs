@@ -242,9 +242,9 @@ namespace ChillyRoom.UnityEditor.iOS.Xcode
         /// </summary>
         /// <param name="targetGuid">The GUID of the target as returned by [[TargetGuidByName()]].</param>
         /// <param name="fileGuid">The file guid returned by [[AddFile]] or [[AddFolderReference]].</param>
-        public void AddFileToBuild(string targetGuid, string fileGuid)
+        public void AddFileToBuild(string targetGuid, string fileGuid, bool weak = false)
         {
-            AddBuildFileImpl(targetGuid, fileGuid, false, null);
+            AddBuildFileImpl(targetGuid, fileGuid, weak, null);
         }
 
         /// <summary>

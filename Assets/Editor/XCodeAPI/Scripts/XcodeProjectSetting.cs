@@ -1,15 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
-
-#if UNITY_EDITOR
 using UnityEditor;
+using System;
 
-[InitializeOnLoad]
-#endif
 /// <summary>
 /// Xcode项目的一些设定值
 /// </summary>
-[System.Serializable]
+[InitializeOnLoad]
+[Serializable]
 public class XcodeProjectSetting : ScriptableObject
 {
     private static XcodeProjectSetting instance;
@@ -18,14 +16,16 @@ public class XcodeProjectSetting : ScriptableObject
     {
         get
         {
-            string SETTING_DATA_PATH = XcodeProjectSettingCreator.GetCurrentFilePath();
-            instance = AssetDatabase.LoadAssetAtPath<XcodeProjectSetting>(SETTING_DATA_PATH);
             if (instance == null)
             {
+                // 获取已有的配置文件
+                instance = AssetDatabase.LoadAssetAtPath<XcodeProjectSetting>(XcodeProjectSettingCreator.GetCurrentFilePath());
+            }
+            if (instance == null)
+            {
+                // 没有时生成配置文件
                 instance = CreateInstance<XcodeProjectSetting>();
-#if UNITY_EDITOR
-                AssetDatabase.CreateAsset(instance, SETTING_DATA_PATH);
-#endif
+                AssetDatabase.CreateAsset(instance, XcodeProjectSettingCreator.GetCurrentFilePath());
             }
             return instance;
         }
@@ -33,15 +33,9 @@ public class XcodeProjectSetting : ScriptableObject
 
     public void SaveConfig()
     {
-#if !UNITY_WEBPLAYER
-
-#if UNITY_EDITOR
         EditorUtility.SetDirty(Instance);
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
-#endif
-
-#endif
     }
 
     public const string PROJECT_ROOT = "$(PROJECT_DIR)/";
@@ -64,7 +58,17 @@ public class XcodeProjectSetting : ScriptableObject
     public const string URL_TYPE_ROLE_KEY = "CFBundleTypeRole";
     public const string URL_IDENTIFIER_KEY = "CFBundleURLName";
     public const string URL_SCHEMES_KEY = "CFBundleURLSchemes";
+
     public const string APPLICATION_QUERIES_SCHEMES_KEY = "LSApplicationQueriesSchemes";
+
+    public const string ATS_KEY = "NSAppTransportSecurity";
+    public const string ALLOWS_ARBITRARY_LOADS_KEY = "NSAllowsArbitraryLoads";
+
+    public const string STATUS_HIDDEN_KEY = "UIStatusBarHidden";
+    public const string STATUS_BAR_APPEARANCE_KEY = "UIViewControllerBasedStatusBarAppearance";
+
+    public const string UI_LAUNCHI_IMAGES_KEY = "UILaunchImages";
+    public const string UI_LAUNCHI_STORYBOARD_NAME_KEY = "UILaunchStoryboardName~iphone";
 
     public const string COPY_PATH = "Copy";
     public const string MODS_PATH = "Mods";
@@ -80,6 +84,12 @@ public class XcodeProjectSetting : ScriptableObject
     public bool EnableObjcExceptions = true;
     [SerializeField]
     public bool EnableGameCenter = false;
+    [SerializeField]
+    public bool EnableATS = false;
+    [SerializeField]
+    public bool EnableStatusBar = false;
+    [SerializeField]
+    public bool NeedToDeleteLaunchiImagesKey = false;
 
     //Entitlement文件路径
     [SerializeField]
@@ -96,33 +106,15 @@ public class XcodeProjectSetting : ScriptableObject
     //签名ID
     [SerializeField]
     public string CodeSignIdentity = "iPhone Distribution: Jiu Wanli network technology (Shanghai) Co., Ltd.";
-    #region 引用的内部Framework
-    [System.Serializable]
-    public struct Framework
-    {
-        [SerializeField]
-        public string name;
-        [SerializeField]
-        public bool weak;
-
-        public Framework(string name, bool weak)
-        {
-            this.name = name;
-            this.weak = weak;
-        }
-    }
-
+    //引用内部框架
     [SerializeField]
-    public List<Framework> FrameworkList = new List<Framework>() { };
-    #endregion
-
-    // Embed Frameworks
+    public List<string> FrameworkList = new List<string>() { };
+    //Embed Frameworks
     [SerializeField]
     public List<string> EmbedFrameworkList = new List<string>() { };
-
     //引用的内部.tbd
     [SerializeField]
-    public List<string> TbdList = new List<string>() { };
+    public List<string> LibList = new List<string>() { };
     //设置OtherLinkerFlag
     [SerializeField]
     public string[] LinkerFlagArray = new string[] { };
@@ -131,7 +123,7 @@ public class XcodeProjectSetting : ScriptableObject
     public string[] FrameworkSearchPathArray = new string[] { "$(inherited)", "$(PROJECT_DIR)/Frameworks" };
 
     #region 针对单个文件进行flag标记
-    [System.Serializable]
+    [Serializable]
     public struct CompilerFlagsSet
     {
         [SerializeField]
@@ -157,7 +149,7 @@ public class XcodeProjectSetting : ScriptableObject
     #endregion
 
     #region 拷贝文件
-    [System.Serializable]
+    [Serializable]
     public struct CopyFiles
     {
         [SerializeField]
@@ -189,7 +181,7 @@ public class XcodeProjectSetting : ScriptableObject
         Bool,
     }
 
-    [System.Serializable]
+    [Serializable]
     public struct PrivacySensiticeData
     {
         [SerializeField]
@@ -212,7 +204,7 @@ public class XcodeProjectSetting : ScriptableObject
     #endregion
 
     #region 第三方平台URL Scheme
-    [System.Serializable]
+    [Serializable]
     public struct BundleUrlType
     {
         [SerializeField]

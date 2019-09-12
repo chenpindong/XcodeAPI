@@ -17,6 +17,9 @@ MonoBehaviour:
   EnableCppRtti: 1
   EnableObjcExceptions: 1
   EnableGameCenter: 1
+  EnableATS: 1
+  EnableStatusBar: 0
+  NeedToDeleteLaunchiImagesKey: 0
   EntitlementFilePath: hw.entitlements
   XcodeAPIDirectoryPath: Assets/Editor/XCodeAPI
   DevelopmentTeam: K3G2K7L99P
@@ -24,27 +27,18 @@ MonoBehaviour:
   CodeSignIdentity: 'iPhone Distribution: Jiu Wanli network technology (Shanghai)
     Co., Ltd.'
   FrameworkList:
-  - name: StoreKit.framework
-    weak: 0
-  - name: SystemConfiguration.framework
-    weak: 0
-  - name: Security.framework
-    weak: 0
-  - name: JavaScriptCore.framework
-    weak: 1
-  - name: AdSupport.framework
-    weak: 0
-  - name: CoreTelephony.framework
-    weak: 0
-  - name: iAd.framework
-    weak: 0
-  - name: Accounts.framework
-    weak: 1
-  - name: Social.framework
-    weak: 1
+  - StoreKit.framework
+  - SystemConfiguration.framework
+  - Security.framework
+  - JavaScriptCore.framework:weak
+  - AdSupport.framework
+  - CoreTelephony.framework
+  - iAd.framework
+  - Accounts.framework:weak
+  - Social.framework:weak
   EmbedFrameworkList:
   - LBSDK.framework
-  TbdList:
+  LibList:
   - libz.tbd
   - libc++.tbd
   - libsqlite3.0.dylib
@@ -63,11 +57,15 @@ MonoBehaviour:
   privacySensiticeData:
   - key: NSCalendarsUsageDescription
     value: Calendar usage required for in-game events.
+    type: 0
   - key: NSPhotoLibraryUsageDescription
     value: Photo Library usage required for sharing in-game footage & screenshots.
+    type: 0
   - key: NSMicrophoneUsageDescription
     value: Microphone usage required for live broadcasting service.
+    type: 0
   - key: NSCameraUsageDescription
     value: Camera usage required for live broadcasting service.
+    type: 0
   BundleUrlTypeList: []
   BackgroundModes: []

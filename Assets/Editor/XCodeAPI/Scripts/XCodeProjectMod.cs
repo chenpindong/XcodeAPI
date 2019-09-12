@@ -78,15 +78,38 @@ public class XCodeProjectMod : MonoBehaviour
         }
 
         //引用内部框架
-        foreach (XcodeProjectSetting.Framework framework in setting.FrameworkList)
+        foreach (string framework in setting.FrameworkList)
         {
-            pbxProject.AddFrameworkToProject(targetGuid, framework.name, framework.weak);
+            string libStr = framework;
+            bool weak = false;
+            if (framework.Contains(":"))
+            {
+                string[] ss = framework.Split(':');
+                if (ss.Length > 1)
+                {
+                    libStr = ss[0];
+                    weak = ss[1] == "weak";
+                }
+            }
+            pbxProject.AddFrameworkToProject(targetGuid, libStr, weak);
         }
 
         //引用.tbd文件
-        foreach (string tbd in setting.TbdList)
+        foreach (string lib in setting.LibList)
         {
-            pbxProject.AddFileToBuild(targetGuid, pbxProject.AddFile("usr/lib/" + tbd, "Frameworks/" + tbd, PBXSourceTree.Sdk));
+            string libStr = lib;
+            bool weak = false;
+            if (lib.Contains(":"))
+            {
+                string[] ss = lib.Split(':');
+                if (ss.Length > 1)
+                {
+                    libStr = ss[0];
+                    weak = ss[1] == "weak";
+                }
+            }
+            string fileGuid = pbxProject.AddFile("usr/lib/" + libStr, "Frameworks/" + libStr, PBXSourceTree.Sdk);
+            pbxProject.AddFileToBuild(targetGuid, fileGuid, weak);
         }
 
         //设置OTHER_LDFLAGS
