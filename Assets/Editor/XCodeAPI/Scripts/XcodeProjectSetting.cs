@@ -1,15 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
-
-#if UNITY_EDITOR
 using UnityEditor;
+using System;
 
-[InitializeOnLoad]
-#endif
 /// <summary>
 /// Xcode项目的一些设定值
 /// </summary>
-[System.Serializable]
+[InitializeOnLoad]
+[Serializable]
 public class XcodeProjectSetting : ScriptableObject
 {
     private static XcodeProjectSetting instance;
@@ -18,14 +16,16 @@ public class XcodeProjectSetting : ScriptableObject
     {
         get
         {
-            string SETTING_DATA_PATH = XcodeProjectSettingCreator.GetCurrentFilePath();
-            instance = AssetDatabase.LoadAssetAtPath<XcodeProjectSetting>(SETTING_DATA_PATH);
             if (instance == null)
             {
+                // 获取已有的配置文件
+                instance = AssetDatabase.LoadAssetAtPath<XcodeProjectSetting>(XcodeProjectSettingCreator.GetCurrentFilePath());
+            }
+            if (instance == null)
+            {
+                // 没有时生成配置文件
                 instance = CreateInstance<XcodeProjectSetting>();
-#if UNITY_EDITOR
-                AssetDatabase.CreateAsset(instance, SETTING_DATA_PATH);
-#endif
+                AssetDatabase.CreateAsset(instance, XcodeProjectSettingCreator.GetCurrentFilePath());
             }
             return instance;
         }
@@ -33,15 +33,9 @@ public class XcodeProjectSetting : ScriptableObject
 
     public void SaveConfig()
     {
-#if !UNITY_WEBPLAYER
-
-#if UNITY_EDITOR
         EditorUtility.SetDirty(Instance);
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
-#endif
-
-#endif
     }
 
     public const string PROJECT_ROOT = "$(PROJECT_DIR)/";
@@ -97,7 +91,7 @@ public class XcodeProjectSetting : ScriptableObject
     [SerializeField]
     public string CodeSignIdentity = "iPhone Distribution: Jiu Wanli network technology (Shanghai) Co., Ltd.";
     #region 引用的内部Framework
-    [System.Serializable]
+    [Serializable]
     public struct Framework
     {
         [SerializeField]
@@ -131,7 +125,7 @@ public class XcodeProjectSetting : ScriptableObject
     public string[] FrameworkSearchPathArray = new string[] { "$(inherited)", "$(PROJECT_DIR)/Frameworks" };
 
     #region 针对单个文件进行flag标记
-    [System.Serializable]
+    [Serializable]
     public struct CompilerFlagsSet
     {
         [SerializeField]
@@ -157,7 +151,7 @@ public class XcodeProjectSetting : ScriptableObject
     #endregion
 
     #region 拷贝文件
-    [System.Serializable]
+    [Serializable]
     public struct CopyFiles
     {
         [SerializeField]
@@ -189,7 +183,7 @@ public class XcodeProjectSetting : ScriptableObject
         Bool,
     }
 
-    [System.Serializable]
+    [Serializable]
     public struct PrivacySensiticeData
     {
         [SerializeField]
@@ -212,7 +206,7 @@ public class XcodeProjectSetting : ScriptableObject
     #endregion
 
     #region 第三方平台URL Scheme
-    [System.Serializable]
+    [Serializable]
     public struct BundleUrlType
     {
         [SerializeField]
