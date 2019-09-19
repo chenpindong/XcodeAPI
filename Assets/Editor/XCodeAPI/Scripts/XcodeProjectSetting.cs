@@ -70,6 +70,8 @@ public class XcodeProjectSetting : ScriptableObject
     public const string UI_LAUNCHI_IMAGES_KEY = "UILaunchImages";
     public const string UI_LAUNCHI_STORYBOARD_NAME_KEY = "UILaunchStoryboardName~iphone";
 
+    public const string UI_REQUIRES_FULL_SCREEN = "UIRequiresFullScreen";
+
     public const string COPY_PATH = "Copy";
     public const string MODS_PATH = "Mods";
 
@@ -88,6 +90,8 @@ public class XcodeProjectSetting : ScriptableObject
     public bool EnableATS = false;
     [SerializeField]
     public bool EnableStatusBar = false;
+    [SerializeField]
+    public bool EnableFullScreen = true;
     [SerializeField]
     public bool NeedToDeleteLaunchiImagesKey = false;
 

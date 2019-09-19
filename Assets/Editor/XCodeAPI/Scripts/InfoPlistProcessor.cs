@@ -180,6 +180,16 @@ public static class InfoPlistProcessor
     }
 
     /// <summary>
+    /// 设置全屏
+    /// </summary>
+    /// <param name="plist"></param>
+    /// <param name="enable"></param>
+    public static void SetFullScreen(PlistDocument plist, bool enable)
+    {
+        plist.root.SetBoolean(XcodeProjectSetting.UI_REQUIRES_FULL_SCREEN, enable);
+    }
+
+    /// <summary>
     /// 删除开场动画
     /// </summary>
     /// <param name="plist"></param>
@@ -205,6 +215,7 @@ public static class InfoPlistProcessor
         SetBundleName(plist);
         SetATS(plist, setting.EnableATS);
         SetStatusBar(plist, setting.EnableStatusBar);
+        SetFullScreen(plist, setting.EnableFullScreen);
         if (setting.NeedToDeleteLaunchiImagesKey)
         {
             DeleteLaunchiImagesKey(plist);
