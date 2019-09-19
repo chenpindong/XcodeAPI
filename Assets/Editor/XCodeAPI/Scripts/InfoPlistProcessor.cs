@@ -175,8 +175,8 @@ public static class InfoPlistProcessor
     /// <param name="enable"></param>
 	public static void SetStatusBar(PlistDocument plist, bool enable)
     {
-        plist.root.SetBoolean(XcodeProjectSetting.STATUS_HIDDEN_KEY, enable);
-        plist.root.SetBoolean(XcodeProjectSetting.STATUS_BAR_APPEARANCE_KEY, !enable);
+        plist.root.SetBoolean(XcodeProjectSetting.STATUS_HIDDEN_KEY, !enable);
+        plist.root.SetBoolean(XcodeProjectSetting.STATUS_BAR_APPEARANCE_KEY, enable);
     }
 
     /// <summary>
